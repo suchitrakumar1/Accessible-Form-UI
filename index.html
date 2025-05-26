@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style media="screen">
+        @import url(http://fonts.googleapis.com/css?family=Roboto:400,700,300);
+    </style>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        .blackbody {
+            width: 640px;
+            height: 80vh;
+            /* background-color: aqua; */
+            border: 2px solid black;
+            border-radius: 60px;
+            padding: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .parent {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 100vh;
+        }
+
+        .first {
+            width: 320px;
+            height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: baseline;
+            flex-direction: column;
+            gap: 30px;
+
+
+        }
+
+        .second {
+            width: 320px;
+            height: 80vh;
+        }
+
+        .nameid {
+            border: 2px solid black;
+            padding: 8px;
+            font-size: large;
+            height: 46px;
+            width: 290px;
+            border-radius: 10px;
+        }
+
+        .emailid {
+            border: 2px solid black;
+            padding: 8px;
+            font-size: large;
+            height: 46px;
+            width: 290px;
+            border-radius: 10px;
+        }
+
+        .passwordid {
+            border: 2px solid black;
+            padding: 8px;
+            font-size: large;
+            height: 46px;
+            width: 290px;
+            border-radius: 10px;
+        }
+
+        .confirmpasswordid {
+            border: 2px solid black;
+            padding: 8px;
+            font-size: large;
+            height: 46px;
+            width: 290px;
+            border-radius: 10px;
+        }
+
+        .updateprofile {
+            border: 2px solid black;
+            height: 52px;
+            width: 290px;
+            background-color: black;
+            color: white;
+            border-radius: 10px;
+            font-size: large;
+        }
+
+        .all {
+            font-weight: normal;
+            font-size: x-large;
+        }
+
+        .firstbox,
+        .secondbox,
+        .thirdbox,
+        .fourthbox,
+        .fifthbox {
+            display: flex;
+            justify-content: center;
+            align-items: baseline;
+            flex-direction: column;
+        }
+
+        .circle-wrap {
+            margin: 150px auto;
+            width: 150px;
+            height: 150px;
+            background: #fefcff;
+            border-radius: 50%;
+            border: 1px solid #cdcbd0;
+        }
+
+        .circle-wrap .circle .mask,
+        .circle-wrap .circle .fill {
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            border-radius: 50%;
+        }
+
+        .circle-wrap .circle .mask {
+            clip: rect(0px, 150px, 150px, 75px);
+        }
+
+        .circle-wrap .inside-circle {
+            width: 122px;
+            height: 122px;
+            border-radius: 50%;
+            background: #d2eaf1;
+            line-height: 120px;
+            text-align: center;
+            margin-top: 14px;
+            margin-left: 14px;
+            color: #1e51dc;
+            position: absolute;
+            z-index: 100;
+            font-weight: 700;
+            font-size: 2em;
+        }
+
+        .mask .fill {
+            clip: rect(0px, 75px, 150px, 0px);
+            background-color: #227ded;
+        }
+
+        .mask.full,
+        .circle .fill {
+            animation: fill ease-in-out 3s;
+            transform: rotate(135deg);
+        }
+
+        @keyframes fill {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(135deg);
+            }
+        }
+
+        .second {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .pc {
+            position: relative;
+            bottom: 130px;
+            font-size: large;
+            font-weight: 100;
+        }
+
+        .idkbox {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: rgb(231, 228, 228);
+            position: relative;
+            bottom: 70px;
+            border-radius: 10px;
+            padding: 10px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="blackbody">
+            <div class="first">
+                <div class="firstbox">
+                    <h1 class="all">Full Name</h1>
+                    <input type="text" name="" class="nameid" placeholder="What Should We Call You">
+                </div>
+                <div class="secondbox">
+                    <h1 class="all">Email</h1>
+                    <input type="email" class="emailid" placeholder="Jhone@doe.com">
+                </div>
+                <div class="thirdbox">
+                    <h1 class="all">Enter Password</h1>
+                    <input type="password" class="passwordid" placeholder="xxxxx">
+                </div>
+                <div class="fourthbox">
+                    <h1 class="all">Confirm Password</h1>
+                    <input type="password" class="confirmpasswordid" placeholder="xxxxx">
+                </div>
+                <div class="fifthbox">
+                    <button class="updateprofile">
+                        Update Profile
+                    </button>
+                </div>
+
+
+            </div>
+            <div class="second">
+                <div class="circle-wrap">
+                    <div class="circle">
+                        <div class="mask full">
+                            <div class="fill"></div>
+                        </div>
+                        <div class="mask half">
+                            <div class="fill"></div>
+                        </div>
+                        <div class="inside-circle"> 75% </div>
+                    </div>
+                </div>
+                <div class="pc">
+                    <p class="pcc">Profile Completeness</p>
+                </div>
+                <div class="idkbox">
+                    <p class="s"> <strike>Create Account</strike></p>
+                    <p class="s"><strike>Update Roadmap Progress</strike></p>
+                    <p class="s"><strike>Setup Public Profile</strike></p>
+                    <p class="n">Complete Your First Project</p>
+                    <p class="n">Invite Your Friends</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
